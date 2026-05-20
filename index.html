@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Club - Analytics Report 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+</head>
+<body>  
+    <nav>
+        <div class="nav-logo">
+            CS<span>.</span>Club
+        </div>
+        <div class="nav-links">
+            <a href="#data">Data</a>
+            <a href="#analysis">Analysis</a>
+            <a href="#strategy">Strategy</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-label">Analytics Report | 2025</div>
+        <h1 class="hero-title">The Data<br/>Doesn't <em>Lie</em></h1>
+        <div class="hero-meta">
+            <div class="hero-meta-item">
+                <div class="val">160</div>
+                <div class="lbl">Total Events</div>
+            </div>
+            <div class="hero-meta-item">
+                <div class="val">4</div>
+                <div class="lbl">Topics</div>
+            </div>
+            <div class="hero-meta-item">
+                <div class="val">79.5</div>
+                <div class="lbl">Average Attendance</div>
+            </div>
+            <div class="hero-meta-item">
+                <div class="val">4.72</div>
+                <div class="lbl">Average Rating / 5</div>
+            </div>
+            <div class="hero-meta-item">
+                <div class="val">11</div>
+                <div class="lbl">Months</div>
+            </div>
+        </div>
+        <div class="hero-bg-num">160</div>
+    </section>
+
+    <div id="data" style="background: var(--light); border-bottom: 1px solid var(--border);">
+        <div class="section">
+            <div class="section-header">
+                <h2>Topic Scorecard</h2>
+                <span>All four topics compared</span>
+            </div>
+            <table class="score-table">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Average Attendance</th>
+                        <th>Average Rating</th>
+                        <th>Students / Hour</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Generative AI</strong></td>
+                        <td>93.7</td>
+                        <td>4.96 / 5</td>
+                        <td>38.2</td>
+                        <td><span class="tag best">Best Overall</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Web Development</strong></td>
+                        <td>103.3</td>
+                        <td>4.85 / 5</td>
+                        <td>30.0</td>
+                        <td><span class="tag good">Top Performer</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Machine Learning</strong></td>
+                        <td>81.5</td>
+                        <td>4.88 / 5</td>
+                        <td>32.7</td>
+                        <td><span class="tag ok">Consistant</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quantum Computing</strong></td>
+                        <td>39.5</td>
+                        <td>4.20 / 5</td>
+                        <td>26.5</td>
+                        <td><span class="tag bad">Needs Rework</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="analysis">
+        <div class="section">
+            <div class="section-header">
+                <h2>9 Questions, 9 Answers</h2>
+                <span>Data Analysis</span>
+            </div>
+
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <div class="qa-num">Q 01</div>
+                    <div class="qa-question">Which topics are most popular?</div>
+                    <div class="qa-answer">All 4 topics each have exactly <strong>40 Events</strong>, perfectly balanced by count. But by student interest, <strong>Web Dev and Generative AI </strong>attract far more people per event.</div>
+                    <div class="qa-value">40 events each</div>
+                </div>
+                <div class="qa-card">
+                    <div class="qa-num">Q 02</div>
+                    <div class="qa-question">Which events attract the highest attendance?</div>
+                    <div class="qa-answer"><strong>Contests dominate</strong> with an average of 104.9 student per event. Workshops follow at 87.0. Talks are a distant last at just 39.5, less than half of contests.</div>
+                    <div class="qa-value red">Contests: 104.9 avg</div>
+                </div>
+                <div class="qa-card">
+                    <div class="qa-num">Q 03</div>
+                    <div class="qa-question">Which events are rated the best?</div>
+                    <div class="qa-answer"><strong>Workshops lead</strong> with an average rating of 4.91, just ahed of contests at 4.87. Talks score noticeably lower at 4.20, suggesting they are less engaging, more boring.</div>
+                    <div class="qa-value">Workships: 4.91 / 5</div>
+                </div>
+                <div class="qa-card">
+                    <div class="qa-num">Q 04</div>
+                    <div class="qa-question">Do harder topics get better or worse ratings?</div>
+                    <div class="qa-answer">Harder events tend to score <strong>lower</strong>. The Pearson correlation between difficulty and rating is <storng>-0.64</storng>, a moderately strong negative relationship. Hard ≠ impressive.</div>
+                    <div class="qa-value red">r = -0.64 (negative)</div>
+                </div>
+                <div class="qa-card">
+                    <div class="qa-num">Q 05</div>
+                    <div class="qa-question">Is there a pattern in difficulty vs rating?</div>
+                    <div class="qa-answer">Yes, a clear <strong>inverted-U pattern</strong>. Level 2 (easy) = 4.10. Level 3 (medium) = 4.91. Level 4 = 4.88. Level 5 (hardest) = 4.20. The sweet spot is difficulty<strong> level 3</strong>.</div>
+                    <div class="qa-value">40 events each</div>
+                </div>
+                <div class="qa-card">
+                    <div class="qa-num">Q 06</div>
+                    <div class="qa-question">Do longer events attract more students?</div>
+                    <div class="qa-answer">Yes. Duration and attendance correlate at <strong>+0.69</strong>. Longer events bring more students — partly because Contests, the most attended type, also run longest at ~3 hours.</div>
+                    <div class="qa-value">r = +0.69 (positive)</div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="qa-num">Q 07</div>
+                    <div class="qa-question">Which topic is most attended?</div>
+                    <div class="qa-answer"><strong>Web Development</strong> wins on raw attendance with 103.3 students per event on average. Generative AI is close second at 93.7. Quantum Computing trails significantly at 39.5.</div>
+                    <div class="qa-value">Web Dev: 103.3 avg students</div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="qa-num">Q 08</div>
+                    <div class="qa-question">Which topic is most liked?</div>
+                    <div class="qa-answer"><strong>Generative AI</strong> tops the ratings with an average of 4.96 — nearly perfect. Machine Learning follows at 4.88. Quantum Computing is the clear outlier at 4.20.</div>
+                    <div class="qa-value red">Gen AI: 4.96 / 5</div>
+                </div>
+
+                <div class="qa-card full">
+                    <div class="qa-num">Q 09</div>
+                    <div class="qa-question">Which topic is most efficient — students per hour?</div>
+                    <div class="qa-answer"><strong>Generative AI</strong> delivers 38.2 students per hour — the highest of any topic. This means it attracts a large, highly-engaged audience relative to the time invested. Quantum Computing delivers only 26.5 students per hour — a 44% gap. As the organizer, efficiency matters: your time and resources are limited.</div>
+                    <div class="qa-value red">Gen AI: 38.2 students/hr · Quantum: 26.5 students/hr</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 1px;">
+                <div class="chart-card">
+                    <div class="chart-title">Average Rating by Difficulty Level</div>
+                    <div class="chart-sub">Level 3 is the clear sweet sport. Going beyond is actively hurts satisfaction.</div>
+                    <div class="chart-wrap"><canvas id="chart-diff"></canvas></div>
+                </div>
+                <div class="chart-card" style="border-top: none;">
+                    <div class="chart-title">Average Attendance by Event Type</div>
+                    <div class="chart-sub">Contests bring in 2.6x more students than Talks. The format matters enormously.</div>
+                    <div class="chart-wrap"><canvas id="chart-type"></canvas></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="strategy">
+        <div class="section">
+            <div class="section-header">
+                <h2>Strategic Recommendations</h2>
+                <span>5 Questions for the Organizer</span>
+            </div>
+
+            <div class="strat-grid">
+                <div class="strat-card">
+                    <div class="strat-num">01</div>
+                    <div class="strat-title">Focus Next Semester On</div>
+                    <div class="strat-body">
+                        <strong>Generative AI and Web Development.</strong><br/><br/>
+                        Gen AI scores the highest in ratings (4.96) and efficiency (38.2/hr). Web Dev draws the biggest raw crowds (103.3 avg). Machine Learning is worth maintaining. Quantum compunting needs structural rework before it deserves more event slots.
+                    </div>
+                </div>
+
+                <div class="strat-card">
+                    <div class="strat-num">02</div>
+                    <div class="strat-title">Difficulty: Decrease or Increase?</div>
+                    <div class="strat-body">
+                        <strong>Keep at Level 3. Lower Quantum Computing specifically.</strong><br/><br/>
+                        The data is clear: Level 3 = peak satisfaction at 4.91. Level 5 drops to 4.20, identical to Level 2. Quantum computing runs 100% of its events at difficulty 5. That s the root cause of its poor numbers.
+                    </div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">03</div>
+                    <div class="strat-title">Best Event Blueprint</div>
+                    <div class="strat-body">
+                    <strong>Generative AI · Workshop · 2.5 hrs · Difficulty 3.</strong><br/><br/>
+                    This exact combination maximises rating, attendance, and student satisfaction. One event in the dataset matching this profile scored a perfect 5.0. It is the proven formula.
+                    </div>
+                </div>
+
+                <div class="strat-card">
+                    <div class="strat-num">04</div>
+                    <div class="strat-title">What Are We Doing Wrong?</div>
+                    <div class="strat-body">
+                    <strong>Three clear problems.</strong><br/><br/>
+                    1 — Too many Talks. They're the worst-rated and worst-attended format, yet appear throughout the year.<br/><br/>
+                    2 — Quantum Computing is permanently locked at max difficulty with no beginner entry point.<br/><br/>
+                    3 — No growth strategy. Attendance is flat with no campaigns or milestone events visible in the data.
+                    </div>
+                </div>
+
+                <div class="strat-card" style="grid-column: span 2;">
+                    <div class="strat-num">05</div>
+                    <div class="strat-title">One More Data Column to Collect</div>
+                    <div class="strat-body">
+                    <strong>Registration count vs actual walk-ins.</strong><br/><br/>
+                    Right now we only see who showed up. We have no idea how many registered and didn't come — which means we can't forecast demand, right-size venues, or identify whether our reminder communication is failing. One extra column unlocks all of that.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="verdict-banner">
+        <h2>Generative AI Workshops at Difficulty 3. Thatis the Answer.</h2>
+        <p>Everything else in this report is context. This is the conclusion.</p>
+    </div>
+    <footer>
+        <p>CS Club Analytics Report | 2025</p>
+        <p>Prepared by &nbsp; <strong>The Event Organizer & Lead Analyst: Abdelrahman Mohamed</strong></p>
+    </footer>
+<script src="app.js"></script>
+</body>
+</html>
