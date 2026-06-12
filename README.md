@@ -6,7 +6,7 @@ I organized 160 events. I also analyzed them. Yes, both. You're welcome.
 
 ## What This Is
 
-A full data analysis of the CS Club's 2025 event season — attendance, ratings, difficulty, efficiency, and a handful of uncomfortable truths about our Quantum Computing program.
+A full data analysis of the CS Club's 2025 event season, attendance, ratings, difficulty, efficiency, and a handful of uncomfortable truths about our Quantum Computing program.
 
 The project produces charts, a summary report, and a website that presents the findings in a way that doesn't make your eyes bleed.
 
@@ -15,7 +15,7 @@ The project produces charts, a summary report, and a website that presents the f
 ## The Stack
 
 - **Python** — pandas, numpy, matplotlib, seaborn
-- **HTML / CSS / JavaScript** — Chart.js for the two charts that actually needed to be charts
+- **HTML / CSS / JavaScript**, Chart.js for the two charts that actually needed to be charts
 - **Data** — one CSV file, 160 rows, no missing values (I checked)
 
 ---
