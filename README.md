@@ -1,7 +1,7 @@
 # CS Club Analytics Report
 
 I organized 160 events. I also analyzed them. Yes, both. You're welcome.
-
+Data collected from the events that already done, feedback form after every event
 ---
 
 ## What This Is
